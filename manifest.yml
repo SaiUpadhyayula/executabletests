@@ -1,0 +1,11 @@
+applications:
+    -
+        name: plmapp-sit
+        memory: 1536MB
+        instances: 1
+        buildpack: java_buildpack
+        path: target/executable-tests-1.0-tests.jar
+        env:
+            SPRING_PROFILES_ACTIVE: cloud
+            server.port: 9000
+            server.http.port: 8080
