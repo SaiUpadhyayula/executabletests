@@ -1,9 +1,10 @@
 package com.c0deattack.cu.runners;
 
+import org.junit.internal.TextListener;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
-import org.junit.runners.model.InitializationError;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
 
@@ -11,13 +12,17 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Running tests of SpringSampleTest !");
-        try {
+//        try {
 
-            final Result run = new JUnitCore().run(new SpringJUnit4ClassRunner(SpringSampleTest.class));
+            ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+            JUnitCore junit = new JUnitCore();
+            junit.addListener(new TextListener(System.out));
 
-        } catch (InitializationError initializationError) {
-            initializationError.printStackTrace();
-        }
-
+            Result result = junit.run(SpringSampleTest.class);
+            System.out.println("Finished. Result: Failures: " +
+                    result.getFailureCount() + ". Ignored: " +
+                    result.getIgnoreCount() + ". Tests run: " +
+                    result.getRunCount() + ". Time: " +
+                    result.getRunTime() + "ms.");
     }
 }
