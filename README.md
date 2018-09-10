@@ -8,6 +8,6 @@ https://stackoverflow.com/questions/52188683/running-spring-tests-from-executabl
 
 ![Main class](/images/main.jpg?raw=true "Main class")
 
-![Test class](/imagestest.jpg?raw=true "Test class")
+![Test class](/images/test.jpg?raw=true "Test class")
 
 
