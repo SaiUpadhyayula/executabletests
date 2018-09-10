@@ -11,6 +11,6 @@ https://stackoverflow.com/questions/52188683/running-spring-tests-from-executabl
 
 ![Assembly](/images/assembly.jpg?raw=true "Assembly")
 
-![factory](/spring_factory.jpg?raw=true "factory")
+![factory](/images/spring_factory.jpg?raw=true "factory")
 
 
