@@ -17,6 +17,7 @@ public class SpringSampleTest {
     public void testSimple() {
 
         System.out.println("**** Init test simple 1 *****");
+        System.out.println("testService = " + testService);
         assertTrue("test simple 1 testService must be in Spring context",testService!=null );
         final boolean valid = testService.isValid();
         assertTrue("Test Simple",valid );
@@ -28,6 +29,7 @@ public class SpringSampleTest {
     public void testSimple2() {
 
         System.out.println("*** Init test simple 2 ****");
+        System.out.println("testService = " + testService);
         assertTrue("test simple 2 testService must be in Spring context",testService!=null );
         final boolean valid = testService.isValid();
         assertTrue("Test Simple w",valid )
