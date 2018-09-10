@@ -12,9 +12,20 @@
             <outputDirectory>/</outputDirectory>
             <useProjectArtifact>true</useProjectArtifact>
             <unpack>true</unpack>
+            <unpackOptions>
+                <excludes>
+                    <exclude>META-INF/spring.factories</exclude>
+                </excludes>
+            </unpackOptions>
             <scope>test</scope>
         </dependencySet>
     </dependencySets>
+    <files>
+        <file>
+            <source>${project.basedir}/src/main/resources/META-INF/spring.factories</source>
+            <outputDirectory>META-INF</outputDirectory>
+        </file>
+    </files>
     <fileSets>
         <fileSet>
             <directory>${project.build.directory}/test-classes</directory>

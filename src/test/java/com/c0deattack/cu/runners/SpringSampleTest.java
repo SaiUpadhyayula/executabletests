@@ -11,15 +11,16 @@ import static org.springframework.test.util.AssertionErrors.assertTrue;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {AppConfig.class})
 public class SpringSampleTest {
-    @Autowired TestService testService;
+    @Autowired
+    TestService testService;
 
     @Test
     public void testSimple() {
 
         System.out.println("**** Init test simple 1 *****");
-        assertTrue("test simple 1 testService must be in Spring context",testService!=null );
+        assertTrue("test simple 1 testService must be in Spring context", testService != null);
         final boolean valid = testService.isValid();
-        assertTrue("Test Simple",valid );
+        assertTrue("Test Simple", valid);
         System.out.println(" *****End test simple 1  result = " + valid);
     }
 
@@ -28,9 +29,9 @@ public class SpringSampleTest {
     public void testSimple2() {
 
         System.out.println("*** Init test simple 2 ****");
-        assertTrue("test simple 2 testService must be in Spring context",testService!=null );
+        assertTrue("test simple 2 testService must be in Spring context", testService != null);
         final boolean valid = testService.isValid();
-        assertTrue("Test Simple w",valid )
+        assertTrue("Test Simple w", valid)
         ;
         System.out.println("End test simple 2 result= " + valid);
     }
