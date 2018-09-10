@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 public class TestService {
 
     public boolean isValid() {
+        System.out.println("service method is called ");
         return true;
     }
 }
